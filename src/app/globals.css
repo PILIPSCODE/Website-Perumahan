@@ -1,26 +1,82 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Kontora";
+  src: url("/fonts/Kontora/Kontora-Thin.otf") format("opentype");
+  font-weight: 100;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Kontora";
+  src: url("/fonts/Kontora/Kontora-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Kontora";
+  src: url("/fonts/Kontora/Kontora-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Kontora";
+  src: url("/fonts/Kontora/Kontora-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Kontora";
+  src: url("/fonts/Kontora/Kontora-SemiBold.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Kontora";
+  src: url("/fonts/Kontora/Kontora-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Kontora";
+  src: url("/fonts/Kontora/Kontora-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Kontora";
+  src: url("/fonts/Kontora/Kontora-ExtraBlack.otf") format("opentype");
+  font-weight: 900;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
+  font-family: "Kontora", sans-serif;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-hero {
+  background-image: url("/img/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-fasilitas {
+  background-image: url("/img/unit-standart.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.custom-height {
+  height: 2000px;
 }
